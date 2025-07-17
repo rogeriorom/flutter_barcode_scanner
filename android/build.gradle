@@ -1,3 +1,7 @@
+plugins {
+    id "com.android.library"
+}
+
 group 'com.amolg.flutterbarcodescanner'
 version '1.0-SNAPSHOT'
 
@@ -18,8 +22,6 @@ rootProject.allprojects {
         jcenter()
     }
 }
-
-apply plugin: 'com.android.library'
 
 android {
     namespace "com.amolg.flutterbarcodescanner"
