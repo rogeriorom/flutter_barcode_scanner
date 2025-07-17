@@ -225,8 +225,8 @@ public class FlutterBarcodeScannerPlugin implements
         barcodeStream = null;
     }
 
-    public static void onBarcodeScanReceiver(final Barcode barcode) {
-        if (barcode != null && !barcode.displayValue.isEmpty() && barcodeStream != null) {
+    public static void onBarcodeScanReceiver(final Barcode barcode, final Activity activity) {
+        if (barcode != null && !barcode.displayValue.isEmpty() && barcodeStream != null && activity != null) {
             activity.runOnUiThread(() -> barcodeStream.success(barcode.rawValue));
         }
     }
